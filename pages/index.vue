@@ -45,7 +45,10 @@
     <div class="hidden md:block ">
       <Warning/>
     </div>
-    <div class="hidden md:block pl-[3%]">
+    <div class="mb-[15%]">
+      <Cooperation/>
+    </div>
+    <div class="hidden md:block pl-[10%]">
       <Footer/>
     </div>
     </div>
@@ -65,6 +68,7 @@ import UserSeakun from "~/components/UserSeakun";
 import DownloadApp from "~/components/DownloadApp";
 import FaqSection from "~/components/FaqSection";
 import Warning from "~/components/Warning";
+import Cooperation from "~/components/Cooperation";
 import Footer from "~/components/Footer";
 export default {
     components :{
@@ -81,6 +85,7 @@ export default {
         DownloadApp,
         FaqSection,
         Warning,
+        Cooperation,
         Footer,
     }
 }
