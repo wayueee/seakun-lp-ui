@@ -1,7 +1,7 @@
 <template>
-  <div class="relative text-center w-[132px] h-[188px] mb-[10%]">
+  <div class="relative text-center w-[102px] h-[115px] md:w-[132px] md:h-[188px] mb-[10%]">
     <button
-      class="absolute bottom-0 w-[132px] h-[32px] border left-0 rounded-xl bg-[#08A081] hover:bg-[#8ADAC9] border-[#08A081] text-white font-medium"
+      class="absolute bottom-0 ml-2 text-[11px] leading-[18px] w-[86px] h-[18px] md:w-[132px] font-semibold md:h-[36px] border left-0 rounded-[6px] bg-[#08A081] hover:bg-[#8ADAC9] text-white"
       :disabled="
         card.name === 'Sefitnes' ||
         card.name === 'Seatap' ||
@@ -21,7 +21,7 @@
         card.name === 'Sejalan'? 'bg-[#8ADAC9] !border-white': ''||
         card.name === 'Seumrah'? 'bg-[#8ADAC9] !border-white': ''||
         card.name === 'Setrip' ? 'bg-[#8ADAC9] !border-white': '' ||
-        card.name === 'Layanan Belum Terdaftar?' ? '!text-[#08A081] bg-white': ''
+        card.name === 'Layanan Belum Terdaftar?' ? '!text-[#08A081] bg-white  hover:bg-white': ''
       "
     >
       {{ card.button }}
@@ -29,13 +29,14 @@
     <img
       :src="card.images"
       :alt="card.name"
-      class="w-[120px] h-auto mx-auto"
-      :class="card.name === 'SeGlowUp' ? 'w-[90px]' : ''"
+      class="w-[60px] md:w-[120px] h-auto mx-auto"
+      :class="card.name === 'SeGlowUp' ? 'w-[47px] md:w-[90px]' : ''"
     />
-    <h1 class="text-[#08A081] font-semibold mb-1 mt-2">
+    <h1 class="text-[#08A081] font-semibold text-[13px] md:text-[18px] mb-1 mt-2"
+    :class="card.name === 'Layanan Belum Terdaftar?' ? '!text-[12px] md:!text-[17px]': ''">
       {{ card.name }}
     </h1>
-    <p class="text-[#08A081]">{{ card.title }}</p>
+    <p class="text-[#08A081] text-[11px] md:text-[14px]">{{ card.title }}</p>
   </div>
 </template>
 

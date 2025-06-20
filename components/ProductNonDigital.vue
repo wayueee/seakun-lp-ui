@@ -1,12 +1,12 @@
 <template>
   <div>
     <div class="">
-      <h1 class="mt-[8%] mb-3 text-3xl font-semibold">Layanan Non Digital</h1>
-      <p class="mb-10 text-[18px]">
+      <h1 class="mt-[8%] mb-3 text-[20px] md:text-3xl font-semibold">Layanan Non Digital</h1>
+      <p class="mb-10 text-[14px] md:text-[18px]">
         Beragam layanan non digital untuk pengguna setia Seakun.
       </p>
     </div>
-    <div class="grid grid-cols-7 mt-10 mb-7">
+    <div class="grid lg:grid-cols-7 grid-cols-3 sm:grid-cols-4 md:grid-cols-5 mt-10 mb-7">
       <CardProductNonDigital
         v-for="item in productNonDigital"
         :key="item"

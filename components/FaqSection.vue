@@ -1,36 +1,36 @@
 <template>
-  <div class="h-[758px] relative">
+  <div class="lg:h-[758px] h-[500px] relative">
     <div class="text-center pt-[8%]">
-      <h1 class="text-[30px] font-semibold pb-1 text-black">
+      <h1 class="text-[20px] lg:text-[30px] font-semibold pb-1 text-black">
         Frequently Asked Question (FAQ)
       </h1>
-      <p class="text-[17px] leading-7 text-black/50">
+      <p class="text-[14px] max-md:px-10 lg:text-[17px] max-md:py-2 leading-7 text-black/50">
         Berikut ini pertanyaan-pertanyaan yang sering ditanyakan pengguna
       </p>
       <div class="absolute top-[222px] left-[370px] z-20">
         <img
-          class="h-[480px] w-[775px]"
+          class="hidden md:block h-[480px] w-[775px]"
           src="/images/faqsection/bg-faq.png"
           alt="bg"
         />
       </div>
       <div class="absolute top-0">
         <img
-          class="h-[602px] w-[1478px]"
+          class="hidden md:block h-[602px] w-[1478px]"
           src="/images/faqsection/bg-vector.png"
           alt="bg"
         />
       </div>
       <div class="absolute -top-9">
-        <img class="" src="/images/faqsection/vector-faq.png" alt="bg" />
+        <img class="hidden md:block" src="/images/faqsection/vector-faq.png" alt="bg" />
       </div>
-      <div class="absolute left-[520px] top-[260px] z-30">
+      <div class="absolute lg:left-[520px] lg:top-[260px] max-md:px-6 lg:z-30">
         <details class="border rounded-md p-4 max-w-xl bg-white">
           <summary
-            class="flex cursor-pointer text-sm font-semibold text-[#08A081]"
+            class="flex cursor-pointer text-start text-xs lg:text-sm font-semibold text-[#08A081]"
           >
             Kapan masa berlangganan di Seakun aktif?
-            <span class="pl-60">></span>
+            <span class="lg:pl-60 pl-[26%]">></span>
           </summary>
           <p class="mt-2 text-[14px] text-start leading-7 text-[#2D2D2D]">
             Masa berlangganan terhitung ketika Admin Whatsapp memberikan akun
@@ -42,10 +42,10 @@
 
         <details class="mt-3 border rounded-md p-4 max-w-xl bg-white">
           <summary
-            class="flex cursor-pointer text-sm font-semibold text-[#08A081]"
+            class="flex cursor-pointer text-start text-xs lg:text-sm font-semibold text-[#08A081]"
           >
             Bagaimana mekanisme untuk melanjutkan langganan di Seakun?
-            <span class="pl-24">></span>
+            <span class="lg:pl-24">></span>
           </summary>
           <p class="mt-2 text-[14px] text-start leading-7 text-[#2D2D2D]">
             Seminggu dan maksimal sehari sebelum masa berlangganan habis, kamu
@@ -56,12 +56,12 @@
           </p>
         </details>
 
-        <details class="mt-3 border rounded-md p-4 max-w-xl bg-white">
+        <details class="mt-3 border text-start rounded-md p-4 max-w-xl bg-white">
           <summary
-            class="flex cursor-pointer text-sm font-semibold text-[#08A081]"
+            class="flex cursor-pointer text-xs lg:text-sm font-semibold text-[#08A081]"
           >
             Apa perbedaan seakun dengan platform langganan yang lain ?
-            <span class="pl-28">></span>
+            <span class="lg:pl-28">></span>
           </summary>
           <p class="mt-2 text-[14px] text-start leading-7 text-[#2D2D2D]">
             Seakun adalah platform yang konsepnya mempertemukan kamu dengan
@@ -76,10 +76,10 @@
 
         <details class="mt-3 border rounded-md p-4 max-w-xl bg-white">
           <summary
-            class="flex cursor-pointer text-sm font-semibold text-[#08A081]"
+            class="flex cursor-pointer text-xs lg:text-sm font-semibold text-[#08A081]"
           >
             Apa perbedaan User Host dan User Reguler ?
-            <span class="pl-56">></span>
+            <span class="lg:pl-56">></span>
           </summary>
           <p class="mt-2 text-[14px] text-start leading-7 text-[#2D2D2D]">
             User Host adalah user yang diberi wewenang untuk melakukan

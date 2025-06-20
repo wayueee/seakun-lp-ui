@@ -1,39 +1,55 @@
 <template>
   <div class="py-[6%] relative">
-    <h1 class="text-[30px] font-semibold pb-2">Pengguna Seakun</h1>
-    <p class="text-[18px] leading-7 text-black/50">
+    <h1
+      class="text-[20px] max-md:text-center md:text-[30px] font-semibold pb-2"
+    >
+      Pengguna Seakun
+    </h1>
+    <p
+      class="text-[14px] md:text-[18px] max-md:text-center md:leading-7 max-md:px-4 text-black/50"
+    >
       Psst! Sudah ada puluhan ribu pengguna dan ribuan grup yang bergabung
       bersama kami!
     </p>
-    <div class="flex gap-4 mt-10 relative">
+    <div
+      class="flex md:gap-4 mt-10 hide-scroll-bar relative overflow-x-auto whitespace-nowrap scroll-smooth pr-12"
+    >
       <img
-        class="w-[50px] h-auto absolute mt-2 right-0"
+        class="hidden md:block w-[50px] h-auto absolute mt-2 right-0"
         src="/images/user/next.png"
         alt="bg"
       />
       <div
-      class="flex shadow-lg rounded-lg items-center py-3"
-      :class="
-          item.name == 'Youtube' ? 'gap-3 px-4 border border-[#08A081]' : 'px-4'
+        class="flex max-md:gap-3 max-md:mx-2 shadow-lg rounded-lg items-center py-3"
+        :class="
+          item.name == 'Youtube'
+            ? 'gap-2 md:gap-3 max-md:px-6 px-4 border border-[#08A081]'
+            : ' px-4'
         "
         v-for="item in grups"
         :key="item"
       >
-        <img class="w-[35px] h-[30px]" :src="item.images" alt="bg" />
-        <h1 class="font-semibold">{{ item.name }}</h1>
-        <p class="text-black/60">{{ item.group }}</p>
+        <img
+          class="w-[22px] h-auto md:w-[35px] md:h-[30px]"
+          :src="item.images"
+          alt="bg"
+        />
+        <h1 class="max-md:text-[14px] font-semibold">{{ item.name }}</h1>
+        <p class="max-md:text-[12px] text-black/60">{{ item.group }}</p>
       </div>
     </div>
-    <div class="flex gap-5 mt-6">
+    <div
+      class="flex gap-5 mt-6 overflow-x-auto hide-scroll-bar whitespace-nowrap scroll-smooth pb-4"
+    >
       <div
         v-for="group in itemsGroup"
         :key="group"
-        class="shadow-lg rounded-lg w-[266px] h-[272px]"
+        class="relative shadow-lg rounded-lg w-[266px] h-[272px] bg-white shrink-0"
       >
-        <div class="flex relative items-center m-3">
+        <div class="flex items-center m-3">
           <img class="w-[138px] h-auto" :src="group.images" alt="bg" />
           <h1
-            class="absolute right-0 text-white px-2 rounded-full"
+            class="ml-auto text-white px-2 rounded-full"
             :class="
               group.available == 'available' ? 'bg-[#08A045]' : 'bg-[#FB2525]'
             "
@@ -41,28 +57,30 @@
             {{ group.available }}
           </h1>
         </div>
+
         <div class="flex relative">
           <p class="mx-3 text-[16px] font-semibold mb-2">{{ group.group }}</p>
           <button class="absolute right-3">
             <img
-            class="w-[22px] h-auto"
-            :class="group.available == 'full' ? 'hidden' : ''"
-            :src="group.atomImages"
-            alt=""
+              class="w-[22px] h-auto"
+              :class="group.available == 'full' ? 'hidden' : ''"
+              :src="group.atomImages"
+              alt=""
             />
           </button>
         </div>
-        <img
-          class="w-[50px] h-auto absolute mt-2 right-0"
-          src="/images/user/next.png"
-          alt="bg"
-        />
-          <hr/>
-          <div v-for="item,index in group.name" :key="index">
-            <h3 :class="item == 'Slot tersedia' ? '!text-[#417465]' : ''" class="ml-3 mt-1">{{ index+1 }}<span class=" ml-2"
-              >{{ item }}</span></h3>
-            </div>
+        <hr class="mx-3" />
+        <div class="px-3 overflow-hidden text-ellipsis">
+          <div v-for="(item, index) in group.name" :key="index">
+            <h3
+              :class="item == 'Slot tersedia' ? '!text-[#417465]' : ''"
+              class="mt-1 text-[14px]"
+            >
+              {{ index + 1 }}. <span class="ml-1">{{ item }}</span>
+            </h3>
           </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -139,28 +157,52 @@ export default {
           atomImages: "/images/user/vector.png",
           group: "Group 1836",
           available: "available",
-          name: ["A********************a", "n*****************a", " h*********a", " s*****a", "Slot tersedia"],
+          name: [
+            "A********************a",
+            "n*****************a",
+            " h*********a",
+            " s*****a",
+            "Slot tersedia",
+          ],
         },
         {
           images: "images/user/item-youtube.png",
           atomImages: "/images/user/vector.png",
           group: "Group 1837",
           available: "available",
-          name: ["A********************a", "n*****************a", " h*********a", " s*****a", "Slot tersedia"],
+          name: [
+            "A********************a",
+            "n*****************a",
+            " h*********a",
+            " s*****a",
+            "Slot tersedia",
+          ],
         },
         {
           images: "images/user/item-youtube.png",
           atomImages: "/images/user/vector.png",
           group: "Group 1838",
           available: "available",
-          name: ["A********************a", "n*****************a", " h*********a", " s*****a", "Slot tersedia",],
+          name: [
+            "A********************a",
+            "n*****************a",
+            " h*********a",
+            " s*****a",
+            "Slot tersedia",
+          ],
         },
         {
           images: "images/user/item-youtube.png",
           atomImages: "/images/user/vector.png",
           group: "Group 1839",
           available: "full",
-          name: ["A********************a", "n*****************a", " h*********a", " s*****a", " h*********a",],
+          name: [
+            "A********************a",
+            "n*****************a",
+            " h*********a",
+            " s*****a",
+            " h*********a",
+          ],
         },
       ],
     };
@@ -168,4 +210,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.hide-scroll-bar::-webkit-scrollbar{
+display: none
+};
+</style>

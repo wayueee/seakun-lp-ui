@@ -1,9 +1,9 @@
 <template>
   <div>
-    <h1 class="text-3xl font-semibold mb-8">Berlangganan Produk Digital</h1>
-    <div class="mb-[2%] flex relative">
+    <h1 class="text-xl md:text-3xl font-semibold mb-8">Berlangganan Produk Digital</h1>
+    <div class="mb-[2%] flex max-md:flex-col relative">
       <div
-        class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+        class="absolute md:inset-y-0 max-md:top-5 left-0 pl-3 flex items-center pointer-events-none"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -20,27 +20,29 @@
           />
         </svg>
       </div>
-      <input
-        type="text"
-        class="pr-[14%] mr-[27%] pl-10 py-4 border border-black rounded-lg"
-        placeholder="Cari Product"
-      />
-      <select
-        class="pl-[1%] pr-[5%] mr-[1%] border-black justify-between border rounded-lg py-4"
-      >
-        <option value="" hidden>Tipe product</option>
-        <option value="">All</option>
-        <option value="">Ready</option>
-        <option value="">Pre-order</option>
-      </select>
-      <select class="pl-[1%] pr-[4%] border rounded-lg border-black py-4">
-        <option value="" hidden>Kategori product</option>
-        <option value="">All</option>
-        <option value="">Ready</option>
-        <option value="">Pre-order</option>
-      </select>
+        <input
+          type="text"
+          class="md:pr-[14%] text-sm md:mr-[24%] pl-10 py-4 border border-black rounded-lg"
+          placeholder="Cari Product"
+        />
+        <div class=" max-md:mt-3 flex max-md:justify-between gap-2">
+          <select
+            class="pl-[1%] max-md:text-sm max-md:pr-[20%] text-black/40 pr-[40%] mr-[1%] border-black justify-between border rounded-lg py-4"
+          >
+            <option value="" hidden>Tipe product</option>
+            <option value="">All</option>
+            <option value="">Ready</option>
+            <option value="">Pre-order</option>
+          </select>
+          <select class="pl-[1%] max-md:text-sm pr-[32%] text-black/40 max-md:pr-[12%] border rounded-lg border-black py-4">
+            <option value="" hidden>Kategori product</option>
+            <option value="">All</option>
+            <option value="">Ready</option>
+            <option value="">Pre-order</option>
+          </select>
+        </div>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-10 pr-[7.3%] relative">
+    <div class="grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 md:gap-4 gap-3 mb-10 lg:pr-[7%] relative">
         <CardProduct v-for="item in products" :key="item"
         :card="item" />
     </div>

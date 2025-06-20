@@ -1,6 +1,6 @@
 <template>
   <header class=" flex"> 
-    <img class=" w-[110px] h-[25px] md:w-[190px] md:h-auto md:mr-[15%]" src="/images/navbar/seakun.png" alt="">
+    <img class="max-md:m-7 w-[110px] h-[25px] md:w-[190px] md:h-auto md:mr-[15%]" src="/images/navbar/seakun.png" alt="">
     <div class="hidden md:block">
       <div class="flex ">
         <button class="px-5 mb-1 leading-1 font-bold text-white/90 text-[13.2px] cursor-pointer tracking-tigh">Layanan</button>
